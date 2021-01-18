@@ -27,6 +27,7 @@
           <div class="form-group">
             <label>skills:</label>
             <input type="text" class="form-control" v-model="item.skill" />
+            <br />
             <input
               type="button"
               :disabled="!item.skill"
@@ -46,6 +47,7 @@
               :value="skill"
               @keyup="updateSkill(skill, index)"
             />
+            <br />
             <input
               type="button"
               class="btn btn-danger"

@@ -84,12 +84,12 @@ export default {
       return skills.join();
     },
     deleteItem(skill) {
-      const confirmSelection = confirm("sure wnat to delete" + skill.title);
+      const confirmSelection = confirm("Are you sure you want to delete " + skill.title);
       if (confirmSelection) {
         APIService.delete(skill.id)
           .then(() => {
             alert("data deleted");
-            this.fetchItems;
+            this.fetchItems();
           })
           .catch((error) => {
             // handle error
